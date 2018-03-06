@@ -447,7 +447,7 @@ GameObject:
   - component: {fileID: 319970736}
   m_Layer: 0
   m_Name: Joueur
-  m_TagString: Untagged
+  m_TagString: Joueur
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -464,6 +464,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   aPerdu: 0
+  score: 0
   vies: 10
   munitions: 10
 --- !u!4 &319970735
@@ -635,6 +636,16 @@ Prefab:
     - target: {fileID: 4682120904901448, guid: 8bdaac89b718fd74aa2821ed3372ebaa, type: 2}
       propertyPath: m_RootOrder
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 114419215957920240, guid: 8bdaac89b718fd74aa2821ed3372ebaa,
+        type: 2}
+      propertyPath: scaleMax
+      value: 0.45
+      objectReference: {fileID: 0}
+    - target: {fileID: 114419215957920240, guid: 8bdaac89b718fd74aa2821ed3372ebaa,
+        type: 2}
+      propertyPath: scaleStep
+      value: 0.015
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 8bdaac89b718fd74aa2821ed3372ebaa, type: 2}
@@ -911,6 +922,16 @@ Prefab:
     - target: {fileID: 4566012291452260, guid: 44297aeb10299c949afe766c96201313, type: 2}
       propertyPath: m_RootOrder
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 114442174449215752, guid: 44297aeb10299c949afe766c96201313,
+        type: 2}
+      propertyPath: scaleMax
+      value: 0.45
+      objectReference: {fileID: 0}
+    - target: {fileID: 114442174449215752, guid: 44297aeb10299c949afe766c96201313,
+        type: 2}
+      propertyPath: scaleStep
+      value: 0.015
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 44297aeb10299c949afe766c96201313, type: 2}

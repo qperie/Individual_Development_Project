@@ -5,30 +5,42 @@ using UnityEngine;
 public class TailleViseur : MonoBehaviour {
 
     Transform myTransform;
-    public float scaleMax = (float)3;
-    public float scaleStep = (float)0.5;
+    public float scaleMax = (float)0.45;
+    public float scaleStep = (float)0.015;
     float myScale;
-    // Transform joueur;
+    int score;
+    int vie;
+    Joueur joueur;
 
     // Use this for initialization
     void Start ()
     {
-        myTransform = GetComponent<Transform>();
-        myScale = myTransform.localScale.x;
+        this.myTransform = GetComponent<Transform>();
+        this.myScale = myTransform.localScale.x;
+        this.joueur = GameObject.FindGameObjectWithTag("Joueur").GetComponent<Joueur>();
+        this.score = this.joueur.score;
+        this.vie = this.joueur.vies;
     }
 	
 	// Update is called once per frame
 	void Update ()
     {
-		if (true) // true -> (joueur.vie < joueur.vie.framed'avant)
+        int newVie = this.joueur.vies;
+        if (newVie < this.vie) // Si le joueur perd une vie
         {
-            myScale = (float)0.2;
-            myTransform.gameObject.transform.localScale = new Vector3(myScale, myScale, 0);
+            this.myScale = (float)0.3;
+            this.myTransform.gameObject.transform.localScale = new Vector3(this.myScale, this.myScale, 0);
+            this.vie = newVie;
         }
-        if (true && myTransform.localScale.x < scaleMax) // true -> cibleDetruite = scoreAugmente
+        int newScore = this.joueur.score;
+        if (newScore > this.score) // Si une cible a été détruite (le score a augmenté)
         {
-            myScale = myScale + scaleStep;
-            myTransform.gameObject.transform.localScale = new Vector3(myScale, myScale, 0);
+            if (this.myTransform.localScale.x < this.scaleMax) // Si le viseur n'est pas encore à sa taille maximale
+            {
+                this.myScale = this.myScale + this.scaleStep;
+                this.myTransform.gameObject.transform.localScale = new Vector3(this.myScale, this.myScale, 0);
+            }
+            this.score = newScore;
         }
 	}
 }

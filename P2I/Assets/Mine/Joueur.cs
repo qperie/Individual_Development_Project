@@ -5,7 +5,7 @@ using UnityEngine;
 public class Joueur : MonoBehaviour {
 
     public bool aPerdu = false;
-    private int score = 0;
+    public int score = 0;
     public int vies = 10;
     public int munitions = 10;
     private InterfaceControleur monInterfaceControleur;
