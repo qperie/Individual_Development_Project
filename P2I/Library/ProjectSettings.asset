@@ -158,7 +158,7 @@ PlayerSettings:
   androidSupportedAspectRatio: 1
   androidMaxAspectRatio: 2.1
   applicationIdentifier:
-    Android: 
+    Android: com.Macompagnie.Moi
     Standalone: unity.Unity Technologies.Unity Remote 4
     Tizen: 
     iOS: com.unity3d.remote

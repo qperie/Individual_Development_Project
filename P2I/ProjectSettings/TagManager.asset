@@ -7,7 +7,6 @@ TagManager:
   - Cible
   - EnnemiGauche
   - EnnemiDroit
-  - Joueur
   layers:
   - Default
   - TransparentFX

@@ -7,3 +7,4 @@ EditorBuildSettings:
   m_Scenes:
   - enabled: 1
     path: Assets/Remote.unity
+    guid: 9e56f01ab4e9746a9ad3ad3f4b221d9c

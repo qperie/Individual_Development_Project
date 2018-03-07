@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class MovePoule : MonoBehaviour {
 
-    public float speed = 6f; // Va dépendre du temps et/ou du score
+    public float speed = 6; // Va dépendre du temps et/ou du score
     public int degats = 1;
     Transform myTransform;
     public Vector3 translationMin = new Vector3(7, 1, 0);

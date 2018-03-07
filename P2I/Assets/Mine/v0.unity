@@ -242,8 +242,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0.84920835}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 0.28, y: 0.099998474}
-  m_SizeDelta: {x: 8.4, y: -0.2}
+  m_AnchoredPosition: {x: 0.28, y: 1.65}
+  m_SizeDelta: {x: 8.4, y: 2.9}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &118803912
 MonoBehaviour:
@@ -340,7 +340,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 68.7, y: -13.832}
+  m_AnchoredPosition: {x: 66.7, y: -17.994995}
   m_SizeDelta: {x: 113.5, y: 30}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &166214912
@@ -447,7 +447,7 @@ GameObject:
   - component: {fileID: 319970736}
   m_Layer: 0
   m_Name: Joueur
-  m_TagString: Joueur
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -464,7 +464,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   aPerdu: 0
-  score: 0
   vies: 10
   munitions: 10
 --- !u!4 &319970735
@@ -637,16 +636,6 @@ Prefab:
       propertyPath: m_RootOrder
       value: 1
       objectReference: {fileID: 0}
-    - target: {fileID: 114419215957920240, guid: 8bdaac89b718fd74aa2821ed3372ebaa,
-        type: 2}
-      propertyPath: scaleMax
-      value: 0.45
-      objectReference: {fileID: 0}
-    - target: {fileID: 114419215957920240, guid: 8bdaac89b718fd74aa2821ed3372ebaa,
-        type: 2}
-      propertyPath: scaleStep
-      value: 0.015
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 8bdaac89b718fd74aa2821ed3372ebaa, type: 2}
   m_IsPrefabParent: 0
@@ -768,7 +757,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 1, y: 1}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: -35.53, y: -13.832}
+  m_AnchoredPosition: {x: -35.53, y: -17.995}
   m_SizeDelta: {x: 71.06, y: 30}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1188047962
@@ -922,16 +911,6 @@ Prefab:
     - target: {fileID: 4566012291452260, guid: 44297aeb10299c949afe766c96201313, type: 2}
       propertyPath: m_RootOrder
       value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 114442174449215752, guid: 44297aeb10299c949afe766c96201313,
-        type: 2}
-      propertyPath: scaleMax
-      value: 0.45
-      objectReference: {fileID: 0}
-    - target: {fileID: 114442174449215752, guid: 44297aeb10299c949afe766c96201313,
-        type: 2}
-      propertyPath: scaleStep
-      value: 0.015
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 44297aeb10299c949afe766c96201313, type: 2}
