@@ -2,33 +2,38 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class TailleViseur : MonoBehaviour {
-
-    Transform myTransform;
-    public float scaleMax = (float)3;
-    public float scaleStep = (float)0.5;
-    float myScale;
-    // Transform joueur;
-
-    // Use this for initialization
+public class TailleViseur : MonoBehaviour
+{
+    private Transform myTransform;
+    public float scaleMax;
+    public float scaleStep;
+    public float myScale;
+    private int vieLocal;
+    private int scoreLocal;
+    private Joueur monJoueur;
+    
     void Start ()
     {
-        myTransform = GetComponent<Transform>();
-        myScale = myTransform.localScale.x;
+        this.myTransform = GetComponent<Transform>();
+        this.myScale = myTransform.localScale.x;
+        this.monJoueur = GameObject.Find("Joueur").GetComponent<Joueur>();
+        this.vieLocal = this.monJoueur.vies;
+        this.scoreLocal = this.monJoueur.score;
     }
 	
-	// Update is called once per frame
 	void Update ()
     {
-		if (true) // true -> (joueur.vie < joueur.vie.framed'avant)
+		if (this.monJoueur.vies < this.vieLocal) // Si le nombre de vies a diminué par rapport à l'update précédent
         {
-            myScale = (float)0.2;
-            myTransform.gameObject.transform.localScale = new Vector3(myScale, myScale, 0);
+            this.myScale = (float)0.3; // Les viseurs reviennent à leur taille initiale
+            this.myTransform.gameObject.transform.localScale = new Vector3(this.myScale, this.myScale, 0);
+            this.vieLocal = this.monJoueur.vies; // On enregistre le nombre de vie lors de cette frame
         }
-        if (true && myTransform.localScale.x < scaleMax) // true -> cibleDetruite = scoreAugmente
+        if (this.monJoueur.score > this.scoreLocal && myTransform.localScale.x < scaleMax) // Si le score a augmenté par rapport à l'update précédent
         {
-            myScale = myScale + scaleStep;
-            myTransform.gameObject.transform.localScale = new Vector3(myScale, myScale, 0);
+            this.myScale = this.myScale + this.scaleStep; // Les viseurs grossissent
+            this.myTransform.gameObject.transform.localScale = new Vector3(this.myScale, this.myScale, 0);
+            this.scoreLocal = this.monJoueur.score; // On enregistre le score lors de cette frame
         }
 	}
 }

@@ -53,13 +53,14 @@
   <ItemGroup>
      <Compile Include="Assets\DataReceiver.cs" />
      <Compile Include="Assets\DataSender.cs" />
-     <Compile Include="Assets\Mine\Ennemis\MovePoule.cs" />
+     <Compile Include="Assets\Mine\DestroyJoueur.cs" />
+     <Compile Include="Assets\Mine\Ennemis\MoveEnnemi.cs" />
      <Compile Include="Assets\Mine\Ennemis\SpawnEnnemis.cs" />
+     <Compile Include="Assets\Mine\GameOver.cs" />
      <Compile Include="Assets\Mine\InterfaceControleur.cs" />
      <Compile Include="Assets\Mine\Joueur.cs" />
+     <Compile Include="Assets\Mine\Menu.cs" />
      <Compile Include="Assets\Mine\Viseurs\MoveViseur.cs" />
-     <Compile Include="Assets\Mine\Viseurs\MoveViseurDroit.cs" />
-     <Compile Include="Assets\Mine\Viseurs\MoveViseurGauche.cs" />
      <Compile Include="Assets\Mine\Viseurs\Rechargement.cs" />
      <Compile Include="Assets\Mine\Viseurs\TailleViseur.cs" />
      <Compile Include="Assets\Mine\Viseurs\TirDroit.cs" />

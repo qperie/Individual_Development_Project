@@ -8,53 +8,55 @@ public class MoveViseur : MonoBehaviour
     public float speed = 6f;
     public Vector3 positions;
     private Transform myTransform;
-    //public Vector3 tailleViseur;
+    public TailleViseur tailleViseur;
     private GameObject[] ennemisGauches;
     private GameObject[] ennemisDroits;
     public GameObject[] ennemis;
     public int indice;
-
-    // Use this for initialization
+    
     void Start()
     {
         this.myTransform = GetComponent<Transform>();
         this.positions = this.myTransform.position;
-        //this.tailleViseur = this.myTransform.GetComponent<Collider>().bounds.size;
+        this.tailleViseur = this.myTransform.GetComponent<TailleViseur>();
     }
-
-    // Update is called once per frame
+    
     void Update()
     {
         this.ennemisGauches = GameObject.FindGameObjectsWithTag("EnnemiGauche");
         this.ennemisDroits = GameObject.FindGameObjectsWithTag("EnnemiDroit");
         this.ennemis = new GameObject[ennemisDroits.Length + ennemisGauches.Length];
+        float scaleViseur = this.tailleViseur.myScale;
         int compteur = 0;
+        // On répertorie les ennemis pouvant être atteint par ce viseur et venant de gauche
         for (int i = 0; i < this.ennemisGauches.Length; i++)
         {
-            if (this.ennemisGauches[i].transform.position.x <= this.myTransform.position.x)
+            if (this.ennemisGauches[i].transform.position.x <= this.myTransform.position.x + 2*scaleViseur)
             {
                 this.ennemis[compteur] = this.ennemisGauches[i];
                 compteur++;
             }
         }
+        // On répertorie les ennemis pouvant être atteint par ce viseur et venant de droite
         int longeur = compteur;
         compteur = 0;
         for (int i = 0; i < ennemisDroits.Length; i++)
         {
-            if (this.ennemisDroits[i].transform.position.x >= this.myTransform.position.x)
+            if (this.ennemisDroits[i].transform.position.x >= this.myTransform.position.x - 2*scaleViseur)
             {
                 this.ennemis[longeur + compteur] = this.ennemisDroits[i];
                 compteur++;
             }
         }
+        // On parcours la liste des ennemis potentiels trouvés ci-dessus et on cherche le plus proche
         if (this.ennemis.Length > 0 && this.ennemis[0] != null)
         {
             trouveEnnemiPlusProche(ennemis);
-            this.positions.y = this.ennemis[this.indice].transform.position.y;
+            this.positions.y = this.ennemis[this.indice].transform.position.y; // On place le viseur à hauteur de l'ennemi en question
         }
-        else
+        else // Si l'ennemi en question n'existe pas
         {
-            this.positions.y = -4;
+            this.positions.y = -4; // On place le viseur en bas, dans sa position initiale
         }
         this.myTransform.SetPositionAndRotation(this.positions, Quaternion.identity);
     }
@@ -85,4 +87,5 @@ public class MoveViseur : MonoBehaviour
             }
         }
     }
+
 }

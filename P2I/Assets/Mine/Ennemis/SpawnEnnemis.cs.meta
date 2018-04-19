@@ -1,11 +1,24 @@
 fileFormatVersion: 2
 guid: 21180e2eac488e7439bb588efc5b7995
-timeCreated: 1519158792
+timeCreated: 1522144408
 licenseType: Free
 MonoImporter:
   externalObjects: {}
   serializedVersion: 2
-  defaultReferences: []
+  defaultReferences:
+  - pouleGauchePrefab: {fileID: 1732944518786952, guid: 41e9ec8b3d28a19489a15941b8d5d0cc,
+      type: 2}
+  - pouleDroitPrefab: {fileID: 1131162308128828, guid: 9e5ef873531164548b9b14e0e47009ed,
+      type: 2}
+  - batGauchePrefab: {fileID: 1490982791972778, guid: 17d1ce79ad0586943853f39e8aa9934f,
+      type: 2}
+  - batDroitPrefab: {fileID: 1587976085455610, guid: 9e71480b71f5d0844888edf7012f0f41,
+      type: 2}
+  - coqGauchePrefab: {fileID: 1789958279808452, guid: d8d09b79bee9c594fb52f65563daff92,
+      type: 2}
+  - coqDroitePrefab: {fileID: 1039504084437890, guid: 87e964a30bf70964fbb50cfd95cfbc23,
+      type: 2}
+  - monJoueur: {instanceID: 0}
   executionOrder: 0
   icon: {instanceID: 0}
   userData: 
